@@ -19,9 +19,9 @@ COPY  run-app.sh /opt/app-root/bin/
 RUN   chgrp -R 0 /opt/app-root && \
       chmod -R g=u /opt/app-root
 
-EXPOSE 8080
+EXPOSE 80
 
-USER  1001
+USER  0
 
 # Run the fat JAR
 CMD   /opt/app-root/bin/run-app.sh
